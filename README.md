@@ -5,11 +5,11 @@ Sample application that runs a Dash app mounted inside a FastAPI webserver.
 
 1. Install dependencies
    ```bash
-   pipenv sync -d
+   poetry install
    ```
 2. Run webserver
    ```bash
-   pipenv run server
+   poetry run python -m app
    ```
 3. Load up in browser: http://localhost:8000
 

@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "fastapi-plotly-dash"
+version = "0.1.0"
+description = "Sample integration of FastAPI and Dash"
+authors = ["Russ Snyder <ru.snyder@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+dash = "*"
+dash_core_components = "*"
+dash_html_components = "*"
+fastapi = "*"
+pandas = "*"
+uvicorn = "*"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
