@@ -1,12 +1,11 @@
 import dash
-from dash.dependencies import Input, Output
-import dash_core_components as dcc
 import dash_html_components as html
+import dash_core_components as dcc
+from dash.dependencies import Input, Output
 
 import flask
 import pandas as pd
 import os
-
 
 def create_dash_app(routes_pathname_prefix: str = None) -> dash.Dash:
     """
@@ -29,7 +28,7 @@ def create_dash_app(routes_pathname_prefix: str = None) -> dash.Dash:
             options=[
                 {'label': 'Tesla', 'value': 'TSLA'},
                 {'label': 'Apple', 'value': 'AAPL'},
-                {'label': 'Coke', 'value': 'COKE'}
+                {'label': 'Coke',  'value': 'COKE'}
             ],
             value='TSLA'
         ),

@@ -11,9 +11,9 @@ app = FastAPI()
 def read_main():
     return {
         "routes": [
-            {"method": "GET", "path": "/", "summary": "Landing"},
+            {"method": "GET", "path": "/",       "summary": "Landing"},
             {"method": "GET", "path": "/status", "summary": "App status"},
-            {"method": "GET", "path": "/dash", "summary": "Sub-mounted Dash application"},
+            {"method": "GET", "path": "/dash",   "summary": "Sub-mounted Dash application"},
         ]
     }
 
