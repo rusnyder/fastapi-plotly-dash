@@ -29,6 +29,10 @@ def get_status():
 dash_app = create_dash_app(routes_pathname_prefix="/dash/")
 app.mount("/", WSGIMiddleware(dash_app.server))
 
+# this is another way it will work. there needs to be an ending "/" after the requests_pathname_prefix
+# dash_app = create_dash_app(requests_pathname_prefix="/dash/")
+# app.mount("/dash", WSGIMiddleware(dash_app.server))
+
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8000)
