@@ -7,9 +7,7 @@ authors = ["Russ Snyder <ru.snyder@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.7"
 
-dash = "*"
-dash_core_components = "*"
-dash_html_components = "*"
+dash = "^2.0.0"
 fastapi = "*"
 pandas = "*"
 uvicorn = "*"
