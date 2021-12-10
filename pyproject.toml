@@ -5,7 +5,7 @@ description = "Sample integration of FastAPI and Dash"
 authors = ["Russ Snyder <ru.snyder@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 
 dash = "^2.0.0"
 fastapi = "*"
