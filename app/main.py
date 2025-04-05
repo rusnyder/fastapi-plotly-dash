@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.wsgi import WSGIMiddleware
 
-from dashapp import create_dash_app
+from app.dashapp import create_dash_app
 
 app = FastAPI()
 
@@ -13,7 +13,11 @@ def read_main():
         "routes": [
             {"method": "GET", "path": "/", "summary": "Landing"},
             {"method": "GET", "path": "/status", "summary": "App status"},
-            {"method": "GET", "path": "/dash", "summary": "Sub-mounted Dash application"},
+            {
+                "method": "GET",
+                "path": "/dash",
+                "summary": "Sub-mounted Dash application",
+            },
         ]
     }
 
@@ -27,6 +31,7 @@ def get_status():
 # to work is by allowing the Dash/Flask app to prefix itself, then mounting
 # it to root
 dash_app = create_dash_app(requests_pathname_prefix="/dash/")
+dash_app.enable_dev_tools()
 app.mount("/dash", WSGIMiddleware(dash_app.server))
 
 

@@ -1,0 +1,16 @@
+---
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.4
+    hooks:
+      # Run the linter
+      - id: ruff
+        args: [ --fix ]
+      # Run the formatter
+      - id: ruff-format
+
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.6.12
+    hooks:
+      - id: uv-lock
